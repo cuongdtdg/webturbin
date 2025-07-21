@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/webturbin/static/js/main.90b93c68.js",
-    "index.html": "/webturbin/index.html",
-    "main.90b93c68.js.map": "/webturbin/static/js/main.90b93c68.js.map"
+    "main.js": "/static/js/main.d822db23.js",
+    "index.html": "/index.html",
+    "main.d822db23.js.map": "/static/js/main.d822db23.js.map"
   },
   "entrypoints": [
-    "static/js/main.90b93c68.js"
+    "static/js/main.d822db23.js"
   ]
 }
