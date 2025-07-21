@@ -21,7 +21,7 @@ function SettingsPage() {
               <input type="password" />
             </label>
             <div>
-              <a href="#">Forget Password ?</a>
+              <button type="button">Forget Password ?</button>
             </div>
           </div>
 
