@@ -1,5 +1,7 @@
 import React from "react";
-return (
+
+function HomePage() {
+  return (
     <div className="homepage">
       <img
         className="background-image"
@@ -17,5 +19,6 @@ return (
       </div>
     </div>
   );
+}
 
 export default HomePage;

@@ -1,14 +1,14 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import LoginPage from './LoginPage.jsx';
-import HomePage from './HomePage.jsx';
-import OTPPage from './OTPPag.jsx';
-import ReviewPage from './ReviewPage.jsx';
-import UploadPage from './UploadPag.jsx';
-import SettingsPage from './SettingsPage.jsx';
-import UserManagePage from './UserManagePjsx.jsx';
-
+// ...existing code...
+import LoginPage from './pages/LoginPage.jsx';
+import HomePage from './pages/HomePage.jsx';
+import OTPPage from './pages/OTPPage.jsx';
+import ReviewPage from './pages/ReviewPage.jsx';
+import UploadPage from './pages/UploadPage.jsx';
+import SettingsPage from './pages/SettingsPage.jsx';
+import UserManagePage from './pages/UserManagePage.jsx';
+// ...existing code...
 function App() {
   return (
     <Router>

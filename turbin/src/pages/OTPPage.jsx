@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/OtpPage.css';
 
 export default function OTPPage() {
   return (
