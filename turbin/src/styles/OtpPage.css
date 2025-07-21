@@ -1,0 +1,169 @@
+.otp-page {
+  width: 1920px;
+  height: 1080px;
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.otp-container {
+  width: 405px;
+  height: 279px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.otp-title {
+  display: flex;
+  width: 326px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  margin: 0;
+}
+
+.otp-form {
+  width: 405px;
+  position: relative;
+  margin-top: 91px;
+}
+
+.otp-input-container {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.otp-input {
+  width: 405px;
+  height: 50px;
+  flex-shrink: 0;
+  border: 1px solid #999;
+  background: rgba(255, 251, 251, 0.00);
+  padding: 0 15px;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #000;
+  outline: none;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.otp-input:focus {
+  border-color: #266EC0;
+  box-shadow: 0 0 0 2px rgba(38, 110, 192, 0.2);
+}
+
+.otp-input::placeholder {
+  color: #B1A9A9;
+  letter-spacing: normal;
+}
+
+.otp-submit-button {
+  width: 405px;
+  height: 49px;
+  flex-shrink: 0;
+  background: #266EC0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  color: #000;
+  text-align: center;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.otp-submit-button:hover:not(:disabled) {
+  background: #1e5a9a;
+}
+
+.otp-submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.resend-button {
+  color: #40F;
+  text-align: center;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: opacity 0.2s;
+}
+
+.resend-button:hover:not(:disabled) {
+  opacity: 0.7;
+}
+
+.resend-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .otp-page {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .otp-container {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  .otp-title {
+    width: 100%;
+    font-size: 36px;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-bottom: 40px;
+  }
+  
+  .otp-form {
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .otp-input,
+  .otp-submit-button {
+    width: 100%;
+  }
+}

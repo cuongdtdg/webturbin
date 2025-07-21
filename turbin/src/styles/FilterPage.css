@@ -1,0 +1,316 @@
+.filter-page {
+  width: 1920px;
+  height: 1080px;
+  border: 1px solid #000;
+  background: #FFF;
+  position: relative;
+  padding: 30px;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 50px;
+}
+
+.back-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-button {
+  width: 123px;
+  height: 50px;
+  border-radius: 4px;
+  background: #F2F2F2;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background: #E5E5E5;
+}
+
+.back-text {
+  color: #000;
+  text-align: center;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.filter-title {
+  color: #000;
+  text-align: center;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.date-filter-section {
+  margin-bottom: 40px;
+}
+
+.date-range-container {
+  width: 600px;
+  height: 70px;
+  background: rgba(217, 217, 217, 0.50);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-left: 1271px;
+}
+
+.date-range-text {
+  color: #000;
+  text-align: center;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.calendar-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.calendar-button:hover {
+  opacity: 0.7;
+}
+
+.filter-options {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  position: relative;
+}
+
+.filter-dropdown {
+  width: 500px;
+  height: 60px;
+  background: rgba(217, 217, 217, 0.50);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filter-dropdown:hover {
+  background: rgba(200, 200, 200, 0.50);
+}
+
+.filter-label {
+  color: #000;
+  text-align: center;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 500px;
+  background: rgba(217, 217, 217, 0.50);
+  border-radius: 10px;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.position-dropdown {
+  width: 300px;
+  height: 200px;
+}
+
+.severity-dropdown {
+  width: 300px;
+  height: 220px;
+}
+
+.inspector-dropdown {
+  width: 300px;
+  height: 220px;
+}
+
+.dropdown-item {
+  color: #000;
+  text-align: center;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background: rgba(180, 180, 180, 0.50);
+}
+
+.dropdown-item:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.dropdown-item:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.current-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #E3F2FD;
+  color: #1976D2;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.filter-tag button {
+  background: none;
+  border: none;
+  color: #1976D2;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.filter-tag button:hover {
+  background: rgba(25, 118, 210, 0.1);
+}
+
+.filter-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.apply-filters-button {
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  background: #266EC0;
+  border: none;
+  color: #FFF;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.apply-filters-button:hover {
+  background: #1e5a9a;
+}
+
+.clear-filters-button {
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  background: #F5F5F5;
+  border: 1px solid #DDD;
+  color: #333;
+  font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clear-filters-button:hover {
+  background: #E9E9E9;
+}
+
+/* Responsive design */
+@media (max-width: 1400px) {
+  .filter-page {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .date-range-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .filter-options {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .filter-dropdown {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .dropdown-menu {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .date-range-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+  }
+  
+  .filter-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .apply-filters-button,
+  .clear-filters-button {
+    width: 100%;
+    max-width: 200px;
+  }
+}

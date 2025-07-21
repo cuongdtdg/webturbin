@@ -1,90 +1,77 @@
-.home-page {
-  width: 100vw;
-  height: 100vh;
-  background: #fff;
+.homepage {
+  width: 1786px;
+  height: 998px;
+  background: #FFF;
   position: relative;
-  overflow: hidden;
+  margin: 0 auto;
 }
 
-.hero-background {
+.background-image {
+  width: 1788px;
+  height: 788px;
+  flex-shrink: 0;
+  aspect-ratio: 1787.72/787.72;
   position: absolute;
   left: -1px;
-  top: 233px;
-  width: 1922px;
-  height: 847px;
+  top: 210px;
+  object-fit: cover;
 }
 
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.login-section {
+  width: 252px;
+  height: 79px;
   flex-shrink: 0;
-  aspect-ratio: 1921.85/846.82;
+  position: absolute;
+  left: 1504px;
+  top: 55px;
 }
 
 .login-button-container {
+  position: relative;
+  width: 252px;
+  height: 79px;
+}
+
+.login-button-bg {
+  width: 149px;
+  height: 56px;
+  flex-shrink: 0;
+  aspect-ratio: 149.46/56.37;
+  border: 1px solid #000;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   position: absolute;
-  right: 89px;
-  top: 77px;
-  width: 161px;
-  height: 61px;
+  left: 50px;
+  top: 16px;
 }
 
 .login-button {
-  width: 100%;
-  height: 100%;
-  border: 1px solid #000;
-  background: #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
   display: flex;
-  align-items: center;
+  width: 252px;
+  height: 79px;
+  flex-direction: column;
   justify-content: center;
-  transition: all 0.2s ease;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
 }
 
 .login-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25);
+  opacity: 0.8;
 }
 
-.login-button span {
-  font-family:
-    Inter,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-weight: 400;
-  font-size: 32px;
-  color: rgba(0, 0, 0, 1);
-  line-height: normal;
-}
-
-@media (max-width: 1920px) {
-  .hero-background {
-    width: 100vw;
-    left: 0;
-  }
-
-  .login-button-container {
-    right: 50px;
-  }
-}
-
-@media (max-width: 768px) {
-  .login-button-container {
-    right: 20px;
-    top: 20px;
-    width: 120px;
-    height: 45px;
-  }
-
-  .login-button span {
-    font-size: 24px;
-  }
-
-  .hero-background {
-    top: 100px;
-  }
+.login-button:active {
+  opacity: 0.6;
 }

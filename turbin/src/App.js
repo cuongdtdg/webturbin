@@ -1,24 +1,26 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
-import "./app.css";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import LoginPage from './LoginPage';
+import HomePage from './HomePage';
+import OTPPage from './OTPPage';
+import ReviewPage from './ReviewPage';
+import UploadPage from './UploadPage';
+import SettingsPage from './SettingsPage';
+import UserManagePage from './UserManagePage';
 
 function App() {
   return (
     <Router>
-      <div className="app">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/otp" element={<OTPPage />} />
+        <Route path="/review" element={<ReviewPage />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/setting" element={<SettingsPage />} />
+        <Route path="/user" element={<UserManagePage />} />
+      </Routes>
     </Router>
   );
 }
