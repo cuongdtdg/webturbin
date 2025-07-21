@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import LoginPage from './LoginPage';
-import HomePage from './HomePage';
-import OTPPage from './OTPPage';
-import ReviewPage from './ReviewPage';
-import UploadPage from './UploadPage';
-import SettingsPage from './SettingsPage';
-import UserManagePage from './UserManagePage';
+import LoginPage from './LoginPage.jsx';
+import HomePage from './HomePage.jsx';
+import OTPPage from './OTPPag.jsx';
+import ReviewPage from './ReviewPage.jsx';
+import UploadPage from './UploadPag.jsx';
+import SettingsPage from './SettingsPage.jsx';
+import UserManagePage from './UserManagePjsx.jsx';
 
 function App() {
   return (
