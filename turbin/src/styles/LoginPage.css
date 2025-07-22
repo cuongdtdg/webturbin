@@ -74,6 +74,9 @@
   border: 1px #999999 solid;
   display: flex;
   align-items: center;
+  border-radius: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .login-input {
@@ -87,6 +90,11 @@
   font-family: Roboto, Arial, sans-serif;
   font-weight: 400;
   background: transparent;
+  border-radius: 0 !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
 }
 
 .login-input::placeholder {
