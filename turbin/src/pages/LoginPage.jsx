@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/LoginPage.css"; // Assuming you have a CSS file for styles
 
 function LoginPage() {
   return (
