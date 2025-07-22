@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/OTPPage.css";
+import "../styles/OtpPage.css";
 
 function OTPPage() {
   const handleChange = (e, index) => {
