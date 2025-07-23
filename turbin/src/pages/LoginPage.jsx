@@ -26,16 +26,23 @@ function LoginPage() {
               </div>
             </div>
 
-            <div className="form-group">
-              <label className="field-label">Your password</label>
-              <div className="input-container">
-                <input
-                  type="password"
-                  className="login-input"
-                  placeholder="Enter your password"
-                />
-              </div>
-            </div>
+<div className="form-group">
+  <label className="field-label">Your password</label>
+  <div className="input-container">
+    <input
+      type="password"
+      className="login-input"
+      placeholder="Enter your password"
+    />
+  </div>
+
+  {/* Forgot Password bên trái */}
+  <div className="forgot-password-container left-align">
+    <button type="button" className="forgot-password">
+      Forgot Password?
+    </button>
+  </div>
+</div>
 
             <button type="submit" className="login-submit-button">
               Login

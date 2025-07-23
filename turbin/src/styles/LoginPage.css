@@ -98,7 +98,7 @@
 }
 
 .login-input::placeholder {
-  color: #B1A9A9;
+  color: #000000;
   font-size: 15px;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 400;
@@ -109,7 +109,7 @@
   width: 405px;
   height: 49px;
   background: #266EC0;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 16px;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 600;
@@ -205,4 +205,27 @@
     height: 42px;
     margin-top: 12px;
   }
+}
+.forgot-password-container {
+  margin-top: 8px;
+}
+
+.forgot-password-container.left-align {
+  text-align: left;
+}
+
+.forgot-password {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+  color: #266EC0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.forgot-password:hover {
+  opacity: 0.8;
 }
