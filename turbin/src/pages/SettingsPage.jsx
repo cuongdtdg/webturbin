@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import "../styles/SettingsPage.css";
+import { useNavigate } from 'react-router-dom';
+import '../styles/SettingsPage.css';
 
 function SettingsPage() {
-  const [activeTab, setActiveTab] = useState("user");
+  const [activeTab, setActiveTab] = useState('user');
   const navigate = useNavigate();
 
   const handleNavigate = (tab, path) => {
@@ -11,23 +11,54 @@ function SettingsPage() {
     navigate(path);
   };
 
+  const handleLogout = () => {
+    console.log('Logging out...');
+    navigate('/login', { replace: true });
+  };
+
   return (
     <div className="app-layout">
       {/* Sidebar */}
       <aside className="sidebar">
         <ul className="menu">
-          <li className={activeTab === "user" ? "active" : ""} onClick={() => handleNavigate("user", "/setting")}>User</li>
-          <li className={activeTab === "dashboard" ? "active" : ""} onClick={() => handleNavigate("dashboard", "/review")}>Dashboard</li>
-          <li className={activeTab === "review" ? "active" : ""} onClick={() => handleNavigate("review", "/filter")}>Review</li>
-          <li className={activeTab === "manage" ? "active" : ""} onClick={() => handleNavigate("manage", "/user")}>User Manage</li>
+          <li
+            className={activeTab === 'user' ? 'active' : ''}
+            onClick={() => handleNavigate('user', '/setting')}
+          >
+            User
+          </li>
+          <li
+            className={activeTab === 'dashboard' ? 'active' : ''}
+            onClick={() => handleNavigate('dashboard', '/review')}
+          >
+            Dashboard
+          </li>
+          <li
+            className={activeTab === 'review' ? 'active' : ''}
+            onClick={() => handleNavigate('review', '/filter')}
+          >
+            Review
+          </li>
+          <li
+            className={activeTab === 'manage' ? 'active' : ''}
+            onClick={() => handleNavigate('manage', '/user')}
+          >
+            User Manage
+          </li>
         </ul>
       </aside>
 
       {/* Main content */}
       <main className="main-content">
         <div className="logout-container">
-          <button onClick={() => handleNavigate("login", "/login")} className="logout-button">Log Out</button>
-
+          {/* Đặt type="button" để không bị coi là submit */}
+          <button
+            type="button"
+            onClick={handleLogout}
+            className="logout-button"
+          >
+            Log Out
+          </button>
         </div>
 
         <div className="form-section">
@@ -53,7 +84,9 @@ function SettingsPage() {
             </div>
 
             <div className="submit-container">
-              <button type="submit" className="submit-button">Update Password</button>
+              <button type="submit" className="submit-button">
+                Update Password
+              </button>
             </div>
           </form>
         </div>
