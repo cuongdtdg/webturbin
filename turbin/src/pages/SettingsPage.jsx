@@ -5,7 +5,7 @@ function SettingsPage() {
   return (
     <div className="settings-page">
       <div className="back-container">
-        <button className="back-button">← Back</button>
+        <button className="back-button">Back</button>
       </div>
 
       <div className="logout-container">

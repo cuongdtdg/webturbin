@@ -1,112 +1,80 @@
+/* Tổng thể */
 .settings-page {
-  width: 100vw;
-  height: 100vh;
-  background: #fff;
-  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 12px;
   box-sizing: border-box;
-  padding: 48px 32px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
 }
 
 /* Back Button */
 .back-container {
-  position: absolute;
-  top: 24px;
-  left: 32px;
+  margin-bottom: 12px;
 }
 
 .back-button {
   background: none;
   border: none;
   font-size: 14px;
-  color: #4a4a4a;
-  padding: 6px 10px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.back-button:hover {
-  color: #266EC0;
+  color: #3b5998;
   text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
 }
 
 /* Logout */
 .logout-container {
-  position: absolute;
-  top: 24px;
-  right: 32px;
+  text-align: right;
+  margin-bottom: 16px;
 }
 
 .logout-button {
-  background-color: #fff0f0;
-  color: #d32f2f;
-  border: 1px solid #f1c0c0;
-  font-size: 13px;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-weight: 500;
+  background: none;
+  border: 1px solid #d00;
+  color: #d00;
+  font-size: 14px;
+  padding: 4px 8px;
   cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.logout-button:hover {
-  background-color: #ffe5e5;
-  border-color: #e89a9a;
 }
 
 /* Form Section */
 .form-section {
-  width: 100%;
-  max-width: 420px;
-  margin-top: 64px;
-  display: flex;
-  flex-direction: column;
+  width: 15%;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 28px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
   text-align: center;
-  color: #222;
 }
 
-/* Group */
+/* Form Group */
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .label {
-  display: inline-block;
-  font-size: 14px;
-  color: #444;
-  font-weight: 500;
-  margin-bottom: 6px;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #000000;
 }
 
 .required {
   color: red;
   margin-right: 4px;
-  font-weight: bold;
 }
 
 .input-box {
   width: 100%;
-  padding: 10px 14px;
-  font-size: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #fff;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.input-box:focus {
-  border-color: #266EC0;
-  box-shadow: 0 0 0 2px rgba(38, 110, 192, 0.1);
-  outline: none;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #999;
+  background: #ffffff;
+  box-sizing: border-box;
 }
 
 /* Forgot Password */
@@ -118,35 +86,24 @@
 .forgot-password {
   background: none;
   border: none;
-  font-size: 13px;
-  color: #007bff;
+  font-size: 12px;
+  color: #0000cc;
   text-decoration: underline;
   cursor: pointer;
   padding: 0;
 }
 
-.forgot-password:hover {
-  color: #0056b3;
-}
-
-/* Submit */
+/* Submit Button */
 .submit-container {
-  margin-top: 32px;
+  margin-top: 20px;
   text-align: center;
 }
 
 .submit-button {
-  background: #266EC0;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 11px 24px;
+  background: #3b5998;
+  color: white;
+  font-size: 14px;
+  padding: 6px 12px;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.submit-button:hover {
-  background: #1e56a0;
 }

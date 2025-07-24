@@ -4,9 +4,12 @@
   position: relative;
   background: white;
   overflow: hidden;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
 }
 
+/* Bỏ background khung lớn, không bo góc */
 .upload-page::before {
   content: "";
   position: absolute;
@@ -15,30 +18,26 @@
   width: 73vw;
   height: 85vh;
   background: #ffffff;
-  border-radius: 1.2vw;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #cccccc;
   z-index: 0;
 }
 
+/* Nút back đơn giản */
 .back-button {
   width: 4vw;
   height: 6vh;
   position: absolute;
   top: 0;
   left: 0;
-  background: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 0.6vw;
+  background: none;
+  border: none;
   font-size: 1.2vw;
   cursor: pointer;
-  transition: all 0.2s ease;
-  color: #333333;
+  color: #1877f2;
+  text-align: left;
 }
 
-.back-button:hover {
-  background: #f5f5f5;
-}
-
+/* Header */
 .project-header {
   position: absolute;
   top: 2.5vh;
@@ -49,17 +48,18 @@
 }
 
 .project-label {
+  font-weight: bold;
+  color: #555;
   font-size: 1.3vw;
-  font-weight: 400;
-  color: #666666;
 }
 
 .project-name {
+  font-weight: bold;
+  color: #000;
   font-size: 1.3vw;
-  font-weight: 600;
-  color: #222222;
 }
 
+/* Các action giữ nguyên bố trí nhưng đơn giản hóa style */
 .actions {
   position: absolute;
   top: 12vh;
@@ -70,58 +70,42 @@
 }
 
 .card-btn {
-  background: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 0.6vw;
+  background: #f0f2f5;
+  border: 1px solid #ccc;
   width: 14vw;
   padding: 1.6vh 1vw;
   cursor: pointer;
   text-align: left;
-  transition: all 0.2s ease;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
-}
-
-.card-btn:hover {
-  background: #f8f8f8;
+  font-size: 14px;
+  color: #000;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .card-btn h3 {
   font-size: 1.15vw;
-  font-weight: 600;
-  color: #222222;
+  font-weight: bold;
+  color: #000;
   margin: 0;
 }
 
 .card-btn p {
   font-size: 0.9vw;
-  font-weight: 400;
-  color: #888888;
   margin-top: 0.4vh;
+  color: #666;
 }
 
+/* Drop-zone */
 .drop-zone {
   position: absolute;
   top: 50vh;
   left: 46vw;
   width: 30vw;
   text-align: center;
-  color: #444444;
   font-size: 1.1vw;
   font-weight: 400;
-  word-wrap: break-word;
   z-index: 1;
-}
-
-.drop-icon {
-  width: 2.5vw;
-  height: 2.5vw;
-  margin: 0 auto 1vh;
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5vw;
+  color: #000;
 }
 
 .drop-zone p {
@@ -129,12 +113,7 @@
 }
 
 .drop-zone .link {
+  color: #1877f2;
   text-decoration: underline;
   cursor: pointer;
-  color: #5555ff;
-  transition: color 0.2s ease;
-}
-
-.drop-zone .link:hover {
-  color: #3333ff;
 }

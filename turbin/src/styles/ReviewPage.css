@@ -1,26 +1,20 @@
-/* App Layout */
+/* Tổng thể */
 .app-layout {
   display: flex;
   min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: black;
+  background: white;
+  line-height: 1.4;
 }
 
 /* Sidebar */
-/* Sidebar - White Modern Style */
 .sidebar {
   width: 220px;
-  height: 100vh;
   background: #ffffff;
-  color: #1f2937;
-  padding-top: 20px;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  border-right: 1px solid #e5e7eb;
+  border-right: 1px solid #ccc;
+  padding-top: 8px;
 }
 
 .menu {
@@ -30,108 +24,88 @@
 }
 
 .menu li {
-  padding: 14px 24px;
+  padding: 6px 12px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  color: black;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  transition: background 0.2s ease, color 0.2s ease;
-  color: #374151;
+  font-size: 13px;
 }
 
-.menu li:hover {
-  background: #f3f4f6;
-  color: #2563eb;
-  border-left: 4px solid #2563eb;
-}
-
+/* Logo */
 .logo_bt {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #2563eb;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 16px;
+  background: #d8dfea;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 
-.dashboard_bt,
-.review_bt,
-.user_bt {
-  color: #4b5563;
-}
-
-.dashboard_bt:hover,
-.review_bt:hover,
-.user_bt:hover {
-  color: #2563eb;
-}
-
-
-/* Main Content */
+/* Main content */
 .main-content {
-  margin-left: 220px; /* offset theo chiều rộng sidebar */
   flex: 1;
-  padding: 30px;
-  background-color: #ffffff;
-  min-height: 100vh;
+  padding: 12px;
 }
 
 /* Header */
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
 }
 
 /* Button Create */
 .btn-create {
-  background-color: #266EC0;
+  font-size: 13px;
+  padding: 4px 10px;
+  background: #3b5998;
   color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: none;
+  border: 1px solid #2d4373;
   cursor: pointer;
 }
 .btn-create:hover {
-  background-color: #1d5dad;
+  background: #2d4373;
 }
 
 /* Search Bar */
 .search-bar {
-  margin: 20px 0;
+  margin-bottom: 10px;
 }
 .search-bar input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
+  padding: 5px;
+  font-size: 13px;
+  border: 1px solid #999;
+  background: white;
+  color: black;
 }
 
-/* Turbine Table */
+/* Table */
 .turbine-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
+  font-size: 13px;
+  margin-top: 8px;
 }
-.turbine-table th, .turbine-table td {
-  padding: 12px;
-  border-bottom: 1px solid #e2e8f0;
+.turbine-table th,
+.turbine-table td {
+  border: 1px solid #ccc;
+  padding: 5px 6px;
   text-align: left;
 }
 
 /* Delete Button */
 .btn-delete {
-  background-color: #CC2323;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  background: #d00;
   color: white;
-  padding: 6px 12px;
-  border-radius: 6px;
-  border: none;
+  border: 1px solid #800;
   cursor: pointer;
 }
 .btn-delete:hover {
-  background-color: #a61c1c;
+  opacity: 0.85;
 }
 
 /* Modal */
@@ -139,60 +113,73 @@
   position: fixed;
   top: 0;
   left: 0;
+  background: white;
   width: 100%;
   height: 100%;
-  background-color: rgba(15, 23, 42, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 999;
+  padding: 16px;
+  font-size: 13px;
 }
+
 .modal-content {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  width: 400px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  max-width: 380px;
+  margin: auto;
+  padding: 0;
 }
+
+.modal-content h2 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Form inside modal */
 .form-group {
-  margin-top: 15px;
+  margin-top: 8px;
 }
+
 .form-group label {
+  font-weight: bold;
+  margin-bottom: 4px;
   display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
 }
+
 .form-group input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
+  padding: 5px;
+  border: 1px solid #999;
+  background: white;
+  color: black;
+  font-size: 13px;
 }
+
+/* Modal actions */
 .modal-actions {
-  margin-top: 20px;
+  margin-top: 14px;
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 8px;
 }
+
 .btn-cancel {
-  background: #94a3b8;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.btn-confirm {
-  background: #266EC0;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 5px 10px;
+  border: 1px solid #999;
+  background: #f0f0f0;
+  font-size: 13px;
   cursor: pointer;
 }
 .btn-cancel:hover {
-  background: #64748b;
+  background: #ddd;
+}
+
+.btn-confirm {
+  padding: 5px 10px;
+  border: 1px solid #3b5998;
+  background: #3b5998;
+  font-size: 13px;
+  color: white;
+  cursor: pointer;
 }
 .btn-confirm:hover {
-  background: #16a34a;
+  background: #2d4373;
 }

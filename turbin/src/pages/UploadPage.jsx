@@ -6,7 +6,7 @@ function UploadPage({ nameProject }) {
     <div className="upload-wrapper">
       <div className="upload-page">
 
-        <button className="back-button">← Back</button>
+        <button className="back-button">Back</button>
 
         <div className="project-header">
           <span className="project-label">Name project:</span>
