@@ -194,3 +194,33 @@
   border: 1px solid #3b5998;
   cursor: pointer;
 }
+.sidebar {
+  width: 220px;
+  background: #fff;
+  border-right: 1px solid #ccc;
+  padding-top: 8px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 6px 12px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  color: black;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.menu li.active {
+  background: #3b5998;
+  color: white;
+}
+
+.menu li:hover {
+  background: #d8dfea;
+}

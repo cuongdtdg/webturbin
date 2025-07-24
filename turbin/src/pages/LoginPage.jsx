@@ -1,7 +1,16 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import "../styles/LoginPage.css"; // Assuming you have a CSS file for styles
 
 function LoginPage() {
+  //dieuhuong
+  const navigate = useNavigate();
+
+const handleLogin = () => {
+  navigate("/review");
+};
+
+  //dieuhuong
   return (
     <div className="login-page">
       <img
@@ -14,7 +23,7 @@ function LoginPage() {
         <div className="login-form">
           <h1 className="login-title">Log in</h1>
 
-          <form>
+          <form onSubmit={handleLogin}>
             <div className="form-group">
               <label className="field-label">Your username</label>
               <div className="input-container">
@@ -26,27 +35,17 @@ function LoginPage() {
               </div>
             </div>
 
-<div className="form-group">
-  <label className="field-label">Your password</label>
-  <div className="input-container">
-    <input
-      type="password"
-      className="login-input"
-      placeholder="Enter your password"
-    />
-  </div>
-
-  {/* Forgot Password bên trái */}
-  <div className="forgot-password-container left-align">
-    <button type="button" className="forgot-password">
-      Forgot Password?
-    </button>
-  </div>
-</div>
-
-            <button type="submit" className="login-submit-button">
-              Login
-            </button>
+             <div className="form-group">
+              <label className="field-label">Your password</label>
+              <div className="input-container">
+                <input
+                type="password"
+                className="login-input"
+                placeholder="Enter your password"
+                />
+                </div>
+              </div>
+              <button type="submit" className="login-submit-button">Login</button>
           </form>
         </div>
       </div>

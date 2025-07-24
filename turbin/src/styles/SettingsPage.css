@@ -107,3 +107,76 @@
   border: none;
   cursor: pointer;
 }
+/* Reuse or copy sidebar CSS from ReviewPage */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background: white;
+  color: black;
+}
+
+.sidebar {
+  width: 220px;
+  background: #fff;
+  border-right: 1px solid #ccc;
+  padding-top: 8px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 6px 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.menu li.active {
+  background: #3b5998;
+  color: white;
+}
+
+.menu li:hover {
+  background: #f2f2f2;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 12px;
+}
+
+/* Logout */
+.logout-container {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.logout-button {
+  background: none;
+  border: 1px solid #d00;
+  color: #d00;
+  font-size: 14px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #ffecec;
+}
+
+/* Form section (reused from before) */
+.form-section {
+  width: 15%;
+  margin: 0 auto;
+}

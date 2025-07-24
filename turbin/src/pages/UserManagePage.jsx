@@ -1,14 +1,51 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/UserManagePage.css';
 
 function UserManagePage() {
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [showDetailForm, setShowDetailForm] = useState(false);
+  const [activeTab, setActiveTab] = useState("manage");
+  const navigate = useNavigate();
+
+  const handleNavigate = (tab, path) => {
+    setActiveTab(tab);
+    navigate(path);
+  };
 
   return (
-    <div className="user-manage-page">
-      <button className="back-button">Back</button>
+    <div className="app-layout">
+      {/* Sidebar thay thế nút Back */}
+      <aside className="sidebar">
+        <ul className="menu">
+          <li
+            className={activeTab === "user" ? "active" : ""}
+            onClick={() => handleNavigate("user", "/setting")}
+          >
+            User
+          </li>
+          <li
+            className={activeTab === "dashboard" ? "active" : ""}
+            onClick={() => handleNavigate("dashboard", "/review")}
+          >
+            Dashboard
+          </li>
+          <li
+            className={activeTab === "review" ? "active" : ""}
+            onClick={() => handleNavigate("review", "/filter")}
+          >
+            Review
+          </li>
+          <li
+            className={activeTab === "manage" ? "active" : ""}
+            onClick={() => handleNavigate("manage", "/user")}
+          >
+            User Manage
+          </li>
+        </ul>
+      </aside>
 
+      {/* Nội dung chính giữ nguyên */}
       <div className="user-manage-content">
         <div className="user-manage-topbar">
           <input type="text" placeholder="Search User" className="user-search-input" />
@@ -47,7 +84,7 @@ function UserManagePage() {
           </table>
         </div>
 
-        {/* Create User Form */}
+        {/* Form tạo */}
         {showCreateForm && (
           <div className="form-wrapper">
             <h3>Create User</h3>
@@ -66,7 +103,7 @@ function UserManagePage() {
           </div>
         )}
 
-        {/* Detail / Edit User Form */}
+        {/* Form chi tiết */}
         {showDetailForm && (
           <div className="form-wrapper">
             <h3>User Detail</h3>

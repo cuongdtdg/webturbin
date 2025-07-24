@@ -1,42 +1,81 @@
 import React, { useState } from "react";
-import "../styles/ReviewPage.css"; // hoặc dùng Tailwind nếu bạn cài sẵn
+import { useNavigate } from "react-router-dom";
+import "../styles/ReviewPage.css";
 
 export default function ReviewPage() {
   const [showModal, setShowModal] = useState(false);
+  const [detailData, setDetailData] = useState(null);
+  const [activeTab, setActiveTab] = useState("dashboard");
+  const navigate = useNavigate();
+
+  const turbines = [
+    { created: "2025-07-21", name: "Turbine A", company: "Company X", images: 0 },
+    { created: "2025-07-20", name: "Turbine B", company: "Company Y", images: 2 },
+  ];
+
+  const handleNavigate = (tab, path) => {
+    setActiveTab(tab);
+    navigate(path);
+  };
 
   const handleCreateClick = () => setShowModal(true);
   const handleCancel = () => setShowModal(false);
+
+  const handleDetailClick = (turbine) => setDetailData({ ...turbine });
+  const handleCloseDetail = () => setDetailData(null);
+
+  const handleSave = () => {
+    console.log("Saved:", detailData);
+    handleCloseDetail();
+  };
+
+  const handleDelete = () => {
+    console.log("Deleted:", detailData);
+    handleCloseDetail();
+  };
 
   return (
     <div className="app-layout">
       {/* Sidebar */}
       <aside className="sidebar">
         <ul className="menu">
-          <li className="logo_bt">User</li>
-          <li className="dashboard_bt">Dashboard</li>
-          <li className="review_bt">Review</li>
-          <li className="user_bt">User Manage</li>
+          <li
+            className={activeTab === "user" ? "active" : ""}
+            onClick={() => handleNavigate("user", "/setting")}
+          >
+            User
+          </li>
+          <li
+            className={activeTab === "dashboard" ? "active" : ""}
+            onClick={() => handleNavigate("dashboard", "/review")}
+          >
+            Dashboard
+          </li>
+          <li
+            className={activeTab === "review" ? "active" : ""}
+            onClick={() => handleNavigate("review", "/filter")}
+          >
+            Review
+          </li>
+          <li
+            className={activeTab === "manage" ? "active" : ""}
+            onClick={() => handleNavigate("manage", "/user")}
+          >
+            User Manage
+          </li>
         </ul>
       </aside>
 
       {/* Main content */}
       <main className="main-content">
-        {/* Header */}
         <div className="header">
-          <button className="btn-create" onClick={handleCreateClick}>
-            + Create
-          </button>
+          <button className="btn-create" onClick={handleCreateClick}>+ Create</button>
         </div>
 
-        {/* Search */}
         <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search turbine name or company..."
-          />
+          <input type="text" placeholder="Search turbine name or company..." />
         </div>
 
-        {/* Table */}
         <table className="turbine-table">
           <thead>
             <tr>
@@ -47,27 +86,29 @@ export default function ReviewPage() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>2025-07-21</td>
-              <td>Turbine A (Company X)</td>
-              <td>0</td>
-              <td>
-                <button className="btn-delete">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-07-20</td>
-              <td>Turbine B (Company Y)</td>
-              <td>2</td>
-              <td>
-                <button className="btn-delete">Delete</button>
-              </td>
-            </tr>
+            {turbines.map((tur, index) => (
+              <tr key={index} onClick={() => navigate("/upload")}>
+                <td>{tur.created}</td>
+                <td>{tur.name} ({tur.company})</td>
+                <td>{tur.images}</td>
+                <td>
+                  <button
+                    className="btn-delete"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleDetailClick(tur);
+                    }}
+                  >
+                    Detail
+                  </button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </main>
 
-      {/* Modal */}
+      {/* Create Modal */}
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -81,10 +122,48 @@ export default function ReviewPage() {
               <input type="text" placeholder="Enter company" />
             </div>
             <div className="modal-actions">
-              <button className="btn-cancel" onClick={handleCancel}>
-                Cancel
-              </button>
+              <button className="btn-cancel" onClick={handleCancel}>Cancel</button>
               <button className="btn-confirm">Create</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Detail Modal */}
+      {detailData && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h2>Turbine Detail</h2>
+            <div className="form-group">
+              <label>Turbine Name</label>
+              <input
+                value={detailData.name}
+                onChange={(e) =>
+                  setDetailData({ ...detailData, name: e.target.value })
+                }
+              />
+            </div>
+            <div className="form-group">
+              <label>Company</label>
+              <input
+                value={detailData.company}
+                onChange={(e) =>
+                  setDetailData({ ...detailData, company: e.target.value })
+                }
+              />
+            </div>
+            <div className="form-group">
+              <label>Created Date</label>
+              <input value={detailData.created} disabled />
+            </div>
+            <div className="form-group">
+              <label>Images</label>
+              <input value={detailData.images} disabled />
+            </div>
+            <div className="modal-actions">
+              <button className="btn-cancel" onClick={handleCloseDetail}>Close</button>
+              <button className="btn-delete" onClick={handleDelete}>Delete</button>
+              <button className="btn-confirm" onClick={handleSave}>Save</button>
             </div>
           </div>
         </div>

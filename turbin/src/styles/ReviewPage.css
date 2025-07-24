@@ -1,19 +1,32 @@
-/* Tổng thể */
+/* ================== Biến màu ================== */
+:root {
+  --blue: #3b5998;
+  --blue-dark: #2d4373;
+  --hover-bg: #d8dfea;
+  --red: #d00;
+  --red-dark: #800;
+  --border-color: #ccc;
+  --text-color: black;
+  --disabled-bg: #eee;
+  --disabled-text: #333;
+}
+
+/* ================== Tổng thể ================== */
 .app-layout {
   display: flex;
   min-height: 100vh;
   font-family: Arial, sans-serif;
   font-size: 14px;
-  color: black;
+  color: var(--text-color);
   background: white;
   line-height: 1.4;
 }
 
-/* Sidebar */
+/* ================== Sidebar ================== */
 .sidebar {
   width: 220px;
-  background: #ffffff;
-  border-right: 1px solid #ccc;
+  background: #fff;
+  border-right: 1px solid var(--border-color);
   padding-top: 8px;
 }
 
@@ -27,47 +40,83 @@
   padding: 6px 12px;
   border-bottom: 1px solid #ddd;
   font-weight: bold;
-  color: black;
-  cursor: pointer;
+  color: var(--text-color);
   font-size: 13px;
+  cursor: pointer;
 }
 
-/* Logo */
-.logo_bt {
-  background: #d8dfea;
-  padding: 10px 12px;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 4px;
+.menu li.active {
+  background: var(--blue);
+  color: white;
 }
 
-/* Main content */
+.menu li:hover {
+  background: var(--hover-bg);
+}
+
+/* ================== Main content ================== */
 .main-content {
   flex: 1;
   padding: 12px;
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 10px;
 }
 
-/* Button Create */
-.btn-create {
+/* ================== Buttons ================== */
+button {
+  font-family: inherit;
   font-size: 13px;
-  padding: 4px 10px;
-  background: #3b5998;
-  color: white;
-  border: 1px solid #2d4373;
   cursor: pointer;
 }
+
+.btn-create {
+  padding: 4px 10px;
+  background: var(--blue);
+  color: white;
+  border: 1px solid var(--blue-dark);
+}
 .btn-create:hover {
-  background: #2d4373;
+  background: var(--blue-dark);
 }
 
-/* Search Bar */
+.btn-delete {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  background: var(--red);
+  color: white;
+  border: 1px solid var(--red-dark);
+}
+.btn-delete:hover {
+  opacity: 0.85;
+}
+
+.btn-cancel {
+  padding: 5px 10px;
+  border: 1px solid #999;
+  background: #f0f0f0;
+  font-size: 13px;
+}
+.btn-cancel:hover {
+  background: #ddd;
+}
+
+.btn-confirm {
+  padding: 5px 10px;
+  border: 1px solid var(--blue);
+  background: var(--blue);
+  font-size: 13px;
+  color: white;
+}
+.btn-confirm:hover {
+  background: var(--blue-dark);
+}
+
+/* ================== Search Bar ================== */
 .search-bar {
   margin-bottom: 10px;
 }
@@ -80,7 +129,7 @@
   color: black;
 }
 
-/* Table */
+/* ================== Table ================== */
 .turbine-table {
   width: 100%;
   border-collapse: collapse;
@@ -89,26 +138,16 @@
 }
 .turbine-table th,
 .turbine-table td {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   padding: 5px 6px;
   text-align: left;
 }
-
-/* Delete Button */
-.btn-delete {
-  font-size: 12px;
-  font-weight: bold;
-  padding: 3px 8px;
-  background: #d00;
-  color: white;
-  border: 1px solid #800;
+.turbine-table tbody tr:hover {
+  background: #f0f0f0;
   cursor: pointer;
 }
-.btn-delete:hover {
-  opacity: 0.85;
-}
 
-/* Modal */
+/* ================== Modal ================== */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -133,7 +172,7 @@
   font-weight: bold;
 }
 
-/* Form inside modal */
+/* ================== Form ================== */
 .form-group {
   margin-top: 8px;
 }
@@ -153,7 +192,13 @@
   font-size: 13px;
 }
 
-/* Modal actions */
+.modal-content input[disabled] {
+  background: var(--disabled-bg);
+  color: var(--disabled-text);
+  cursor: not-allowed;
+}
+
+/* ================== Modal Actions ================== */
 .modal-actions {
   margin-top: 14px;
   display: flex;
@@ -161,25 +206,23 @@
   gap: 8px;
 }
 
-.btn-cancel {
-  padding: 5px 10px;
-  border: 1px solid #999;
-  background: #f0f0f0;
-  font-size: 13px;
-  cursor: pointer;
-}
-.btn-cancel:hover {
-  background: #ddd;
-}
+/* ================== Responsive ================== */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
 
-.btn-confirm {
-  padding: 5px 10px;
-  border: 1px solid #3b5998;
-  background: #3b5998;
-  font-size: 13px;
-  color: white;
-  cursor: pointer;
-}
-.btn-confirm:hover {
-  background: #2d4373;
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .main-content {
+    padding: 8px;
+  }
+
+  .modal-content {
+    width: 100%;
+  }
 }

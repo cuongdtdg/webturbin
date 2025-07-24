@@ -206,26 +206,3 @@
     margin-top: 12px;
   }
 }
-.forgot-password-container {
-  margin-top: 8px;
-}
-
-.forgot-password-container.left-align {
-  text-align: left;
-}
-
-.forgot-password {
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 13px;
-  font-family: Roboto, Arial, sans-serif;
-  font-weight: 400;
-  color: #266EC0;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.forgot-password:hover {
-  opacity: 0.8;
-}
