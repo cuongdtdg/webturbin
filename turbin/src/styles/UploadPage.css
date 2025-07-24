@@ -24,17 +24,16 @@
 
 /* Nút back đơn giản */
 .back-button {
-  width: 4vw;
-  height: 6vh;
+  width: 3vw;
+  height: 3vh;
   position: absolute;
   top: 0;
   left: 0;
-  background: none;
-  border: none;
-  font-size: 1.2vw;
+  background: #3b5998;
+  border: #283e6e;
+  font-size: 0.8vw;
   cursor: pointer;
-  color: #1877f2;
-  text-align: left;
+  color: #ffffff;
 }
 
 /* Header */
