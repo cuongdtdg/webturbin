@@ -26,7 +26,8 @@ function SettingsPage() {
       {/* Main content */}
       <main className="main-content">
         <div className="logout-container">
-          <button className="logout-button">Log Out</button>
+          <button onClick={() => handleNavigate("login", "/login")} className="logout-button">Log Out</button>
+
         </div>
 
         <div className="form-section">
