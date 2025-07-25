@@ -224,3 +224,38 @@
 .menu li:hover {
   background: #d8dfea;
 }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.form-wrapper {
+  background: white;
+  padding: 16px;
+  border: 1px solid black;
+  width: 300px;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 4px;
+  margin: 4px 0;
+  border: 1px solid #000;
+  font-size: 14px;
+  background: white;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}

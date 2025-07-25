@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/FilterPage.css';
-
+import Sidebar from "../components/Sidebar";
 function FilterPage() {
   const [activeTab, setActiveTab] = useState("review");
   const navigate = useNavigate();
@@ -14,34 +14,7 @@ function FilterPage() {
   return (
     <div className="app-layout">
       {/* Sidebar thay cho nút back */}
-      <aside className="sidebar">
-        <ul className="menu">
-          <li
-            className={activeTab === "user" ? "active" : ""}
-            onClick={() => handleNavigate("user", "/setting")}
-          >
-            User
-          </li>
-          <li
-            className={activeTab === "dashboard" ? "active" : ""}
-            onClick={() => handleNavigate("dashboard", "/review")}
-          >
-            Dashboard
-          </li>
-          <li
-            className={activeTab === "review" ? "active" : ""}
-            onClick={() => handleNavigate("review", "/filter")}
-          >
-            Review
-          </li>
-          <li
-            className={activeTab === "manage" ? "active" : ""}
-            onClick={() => handleNavigate("manage", "/user")}
-          >
-            User Manage
-          </li>
-        </ul>
-      </aside>
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
       {/* Main filter content */}
       <main className="filter-container">
