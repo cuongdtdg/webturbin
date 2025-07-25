@@ -23,7 +23,7 @@ function UserManagePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3001/users")
+    fetch("https://68831eb921fa24876a9cba18.mockapi.io/users")
       .then(res => res.json())
       .then(data => setUsers(data))
       .catch(err => {
@@ -82,7 +82,7 @@ function UserManagePage() {
       id: generateNextId()
     };
 
-    fetch("http://localhost:3001/users", {
+    fetch("https://68831eb921fa24876a9cba18.mockapi.io/users", {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newUser)
@@ -116,7 +116,7 @@ function UserManagePage() {
     const payload = { ...selectedUser };
     if (!payload.password) delete payload.password;
 
-    fetch(`http://localhost:3001/users/${selectedUser.id}`, {
+    fetch(`https://68831eb921fa24876a9cba18.mockapi.io/users/${selectedUser.id}`, {
       method: "PUT",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -139,7 +139,7 @@ function UserManagePage() {
   const handleDeleteUser = () => {
     if (!window.confirm("Are you sure to delete this user?")) return;
 
-    fetch(`http://localhost:3001/users/${selectedUser.id}`, {
+    fetch(`https://68831eb921fa24876a9cba18.mockapi.io/users/${selectedUser.id}`, {
       method: "DELETE"
     })
       .then(() => {

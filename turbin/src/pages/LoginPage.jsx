@@ -20,7 +20,7 @@ useEffect(() => {
 
     try {
       const res = await fetch(
-        `http://localhost:3001/users?username=${username}&password=${password}`
+        `https://68831eb921fa24876a9cba18.mockapi.io/users?username=${username}&password=${password}`
       );
       const data = await res.json();
 

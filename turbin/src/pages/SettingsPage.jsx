@@ -48,7 +48,7 @@ function SettingsPage() {
     }
 
     try {
-      const res = await fetch(`http://localhost:3001/users/${user.id}`, {
+      const res = await fetch(`https://68831eb921fa24876a9cba18.mockapi.io/users/${user.id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password: newPass }),

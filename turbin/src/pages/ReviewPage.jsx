@@ -15,7 +15,7 @@ export default function ReviewPage() {
 
   // Load turbines từ API
   const fetchTurbines = async () => {
-    const res = await fetch("http://localhost:3001/turbines");
+    const res = await fetch("https://68831eb921fa24876a9cba18.mockapi.io/turbines");
     const data = await res.json();
     setTurbines(data);
   };
@@ -43,7 +43,7 @@ export default function ReviewPage() {
       created: new Date().toISOString().slice(0, 10),
       images: 0
     };
-    await fetch("http://localhost:3001/turbines", {
+    await fetch("https://68831eb921fa24876a9cba18.mockapi.io/turbines", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTurbine)
@@ -56,7 +56,7 @@ export default function ReviewPage() {
   const handleCloseDetail = () => setDetailData(null);
 
   const handleSave = async () => {
-    await fetch(`http://localhost:3001/turbines/${detailData.id}`, {
+    await fetch(`https://68831eb921fa24876a9cba18.mockapi.io/turbines/${detailData.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(detailData)
@@ -66,7 +66,7 @@ export default function ReviewPage() {
   };
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:3001/turbines/${detailData.id}`, {
+    await fetch(`https://68831eb921fa24876a9cba18.mockapi.io/turbines/${detailData.id}`, {
       method: "DELETE"
     });
     fetchTurbines();
